@@ -10,6 +10,7 @@ import UIKit
 
 class PokemonTableViewCell: UITableViewCell {
 
+    var pokemonController: PokemonController?
     var pokemon: Pokemon? {
         didSet {
             updateViews()
@@ -30,7 +31,7 @@ class PokemonTableViewCell: UITableViewCell {
     func updateViews() {
         guard let pokemon = pokemon,
             let typeColors = typeColors,
-            let textColors = getTextColor(pokemon: pokemon) else {return }
+            let textColors = pokemonController?.getTextColor(pokemon: pokemon) else {return }
         
         
         pokemonLabel.text = pokemon.name
@@ -52,19 +53,7 @@ class PokemonTableViewCell: UITableViewCell {
         
     }
     
-    func getTextColor(pokemon: Pokemon) -> [UIColor]? {
-        let types = pokemon.types.compactMap { $0.name }
-        var textColors: [UIColor] = []
-        let darkTypes = ["Poison", "Water", "Dragon", "Ghost", "Dark", "Rock", "Steel"]
-        for type in types {
-            if darkTypes.contains(type) {
-                textColors.append(.white)
-            } else {
-                textColors.append(.black)
-            }
-        }
-        return textColors
-    }
+
     
     
 }

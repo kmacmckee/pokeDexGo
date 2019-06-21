@@ -97,5 +97,36 @@ class PokemonController {
     
         return colors
     }
+    
+    
+    func getTextColor(pokemon: Pokemon) -> [UIColor]? {
+        let types = pokemon.types.compactMap { $0.name }
+        var textColors: [UIColor] = []
+        let darkTypes = ["Poison", "Water", "Dragon", "Ghost", "Dark", "Rock", "Steel"]
+        for type in types {
+            if darkTypes.contains(type) {
+                textColors.append(.white)
+            } else {
+                textColors.append(.black)
+            }
+        }
+        return textColors
+    }
+    
+    
+    
+    func formatQuickMove(move: String) -> String {
+
+        let moveString = move
+        var moveStringArray = moveString.split(separator: " ")
+        moveStringArray.removeLast()
+        let formattedMove = moveStringArray.joined(separator: " ")
+        return formattedMove
+        
+    }
+    
+    
+    
+    
   
 }

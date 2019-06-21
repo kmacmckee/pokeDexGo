@@ -22,6 +22,7 @@
 		C431EDED22B9C15300D67592 /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C431EDEB22B9C15300D67592 /* PokemonTableViewCell.swift */; };
 		C431EDEF22B9CD3B00D67592 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C431EDEE22B9CD3B00D67592 /* PokemonDetailViewController.swift */; };
 		C431EDF022B9CD3B00D67592 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C431EDEE22B9CD3B00D67592 /* PokemonDetailViewController.swift */; };
+		C459A04C22BC431600A7F21B /* MoveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C459A04B22BC431600A7F21B /* MoveTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		C431EDE822B9B72200D67592 /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
 		C431EDEB22B9C15300D67592 /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
 		C431EDEE22B9CD3B00D67592 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		C459A04B22BC431600A7F21B /* MoveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				C431EDEE22B9CD3B00D67592 /* PokemonDetailViewController.swift */,
 				C431EDEB22B9C15300D67592 /* PokemonTableViewCell.swift */,
 				C431EDE822B9B72200D67592 /* PokemonTableViewController.swift */,
+				C459A04B22BC431600A7F21B /* MoveTableViewCell.swift */,
 				C431EDE122B9A9E500D67592 /* Pokemon.swift */,
 				C431EDE322B9B1D700D67592 /* PokemonController.swift */,
 				C431EDC822B9A98200D67592 /* Assets.xcassets */,
@@ -221,6 +224,7 @@
 				C431EDC222B9A97F00D67592 /* AppDelegate.swift in Sources */,
 				C431EDE222B9A9E500D67592 /* Pokemon.swift in Sources */,
 				C431EDE922B9B72200D67592 /* PokemonTableViewController.swift in Sources */,
+				C459A04C22BC431600A7F21B /* MoveTableViewCell.swift in Sources */,
 				C431EDEC22B9C15300D67592 /* PokemonTableViewCell.swift in Sources */,
 				C431EDE422B9B1D700D67592 /* PokemonController.swift in Sources */,
 				C431EDEF22B9CD3B00D67592 /* PokemonDetailViewController.swift in Sources */,

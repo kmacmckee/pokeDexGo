@@ -10,15 +10,7 @@ import Foundation
 
 struct Pokemon: Codable {
     
-//    static func == (lhs: Pokemon, rhs: Pokemon) -> Bool {
-//        return lhs.dex == rhs.dex &&
-//            lhs.name == rhs.name &&
-//            lhs.maxCP == rhs.maxCP
-//    }
-    
-    
     var dex: Int
-
     var name: String
     var maxCP: Int
     var cinematicMoves: [Move]
