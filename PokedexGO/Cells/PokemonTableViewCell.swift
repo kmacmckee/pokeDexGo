@@ -30,19 +30,16 @@ class PokemonTableViewCell: UITableViewCell {
     
     func updateViews() {
         guard let pokemon = pokemon,
-            let typeColors = typeColors,
-            let textColors = pokemonController?.getTextColor(pokemon: pokemon) else {return }
+            let typeColors = typeColors else { return }
         
         
         pokemonLabel.text = pokemon.name
         
         type1Label.text = pokemon.types.first?.name
-        type1Label.textColor = textColors.first
         type1View.backgroundColor = typeColors.first
         
         if pokemon.types.count > 1 {
             type2Label.text = pokemon.types.last?.name
-            type2Label.textColor = textColors.last
             type2View.backgroundColor = typeColors.last
         } else {
             type2View.backgroundColor = typeColors.first

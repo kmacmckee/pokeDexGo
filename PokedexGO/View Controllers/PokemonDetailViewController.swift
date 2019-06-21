@@ -46,13 +46,11 @@ class PokemonDetailViewController: UIViewController, UITableViewDelegate, UITabl
         if typeColors.count > 1 {
             let gradient = CAGradientLayer()
             gradient.colors = typeColors.compactMap { $0.cgColor }
-            //gradient.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
             gradient.frame = view.bounds
             view.layer.insertSublayer(gradient, at: 0)
         } else {
             let gradient = CAGradientLayer()
             gradient.colors = [typeColors.first?.cgColor, UIColor(named: "white")?.cgColor]
-            //gradient.transform = CATransform3DMakeRotation(CGFloat.pi / 2, 0, 0, 1)
             gradient.frame = view.bounds
             view.layer.insertSublayer(gradient, at: 0)
             
@@ -65,23 +63,18 @@ class PokemonDetailViewController: UIViewController, UITableViewDelegate, UITabl
     func updateViews() {
         guard isViewLoaded else { return }
         guard let pokemon = pokemon,
-            let typeColors = pokemonController?.getTypeColor(pokemon: pokemon),
-            let textColors = pokemonController?.getTextColor(pokemon: pokemon) else { return }
+            let typeColors = pokemonController?.getTypeColor(pokemon: pokemon) else { return }
         
         pokemonNameLabel.text = pokemon.name.capitalized
         typeLabel.text = pokemon.types.first?.name
-        //typeLabel.backgroundColor = .lightGray
         typeLabel.backgroundColor = typeColors.first
-        typeLabel.textColor = textColors.first
         
         type1Label.text = pokemon.types.first?.name
         type1Label.backgroundColor = typeColors.first
-        type1Label.textColor = textColors.first
         
         
         type2Label.text = pokemon.types.last?.name
         type2Label.backgroundColor = typeColors.last
-        type2Label.textColor = textColors.last
         
         if pokemon.types.count > 1 {
             typeLabel.isHidden = true

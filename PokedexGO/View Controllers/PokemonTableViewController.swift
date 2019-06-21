@@ -23,13 +23,13 @@ class PokemonTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PokemonCell", for: indexPath) as! PokemonTypeIconTableViewCell
         cell.pokemonController = pokemonController
 
         let pokemon = pokemonController.pokemons[indexPath.row]
         let typeColors = pokemonController.getTypeColor(pokemon: pokemon)
         cell.pokemon = pokemon
-        cell.typeColors = typeColors
+        //cell.typeColors = typeColors
         
         return cell
     }
